@@ -1,0 +1,69 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4.5rem 10rem 0rem 10rem;
+  font-weight: normal;
+}
+
+a, .white {
+  font-size: 16.45px;
+  text-decoration: none;
+  color: var(--vt-c-white);
+  transition: 0.5s;
+}
+
+.btn {
+  padding: 0.4rem 4rem;
+}
+
+.btn-br, .btn-sd {
+  border: none;
+  color: var(--vt-c-white);
+}
+
+.btn-br {
+  background-color: var(--vt-c-primary-color);
+}
+
+.btn-sd {
+  background-color: var(--vt-c-secondary-color);
+}
+
+.h2-title {
+  font-size: 36px;
+  font-weight: 550;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: var(--vt-c-primary-color);
+}
+
+.contact, .project, .about-me {
+  display: block;
+  margin-top: 3rem;
+  align-items: center;
+  color: var(--vt-c-white);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--vt-c-black);
+  }
+
+  .btn-br:hover, .btn-sd:hover {
+    font-weight: 600;
+  }
+
+  .btn-br:hover {
+    border: 1.5px var(--vt-c-primary-color) solid;
+    color: hsla(160, 100%, 37%, 1);
+    background-color: var(--vt-c-white);
+  }
+
+  .btn-sd:hover {
+    border: 1.5px var(--vt-c-secondary-color) solid;
+    color: var(--vt-c-secondary-color);
+    background-color: var(--vt-c-white);
+  }
+}
