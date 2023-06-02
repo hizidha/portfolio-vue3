@@ -8,18 +8,34 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'HomePage',
-      component: HomeView
-    },
-    {
-      path: '/project/:id',
-      name: 'DetailProject',
-      component: DetailProjectView
+      component: HomeView,
+      children: [
+        {
+          path: '',
+          name: 'HomePage',
+          component: HomeView
+        },
+        {
+          path: 'project',
+          name: 'ProjectPage',
+          children: [
+            {
+              path: '',
+              component: HomeView
+            }
+          ]
+        },
+      ]
     },
     {
       path: '/contact',
       name: 'ContactPage',
       component: ContactView
+    },
+    {
+      path: '/project/:id',
+      name: 'DetailProject',
+      component: DetailProjectView
     }
   ]
 })
